@@ -1,4 +1,4 @@
-# Bookworm Bin - Reading Tracker for Android
+# Bookworm Bin - Android Reading Tracker
 A comprehensive reading tracker app for Android that helps users monitor their reading habits across books, magazines, and articles.
 
 ## Features
