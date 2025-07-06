@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mya Von Behren
+     Final Project
+     June 11, 2024
+
+     All colors used for the project.
+
+-->
+
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_blue">#0A2463</color>
+    <color name="light_white">#FFFAFF</color>
+    <color name="pink">#D8315B</color>
+    <color name="light_blue">#6EACD8</color>
+</resources>

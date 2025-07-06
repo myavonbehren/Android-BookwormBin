@@ -1,0 +1,52 @@
+<!-- Mya Von Behren
+     Final Project
+     June 11, 2024
+
+     All strings used for the project.
+
+-->
+<resources>
+    <string name="app_name">Bookworm Bin</string>
+    <string name="author_hint">Example: Jane Austen</string>
+    <string name="link_hint">Example: www.google.com</string>
+    <string name="title_hint">Example: Pride and Prejudice</string>
+    <string name="notes">Notes</string>
+    <string name="fiction">Fiction</string>
+    <string name="non_fiction">Non-Fiction</string>
+    <string name="mystery">Mystery</string>
+    <string name="romance">Romance</string>
+    <string name="sci_fi">Sci-Fi</string>
+    <string name="comedy">Comedy</string>
+    <string name="horror">Horror</string>
+    <string name="date_hint">Example: 6/11/24</string>
+    <string name="submit">Submit</string>
+    <string name="title">TITLE</string>
+    <string name="author">AUTHOR</string>
+    <string name="type">TYPE</string>
+    <string name="link">LINK</string>
+    <string name="date">DATE</string>
+    <string name="status">STATUS</string>
+    <string name="textview">TextView</string>
+    <string name="notes_title">NOTES</string>
+    <string name="rating">RATING</string>
+    <string name="genre_title">GENRE</string>
+    <string name="clear">Clear</string>
+    <string name="back">Back</string>
+    <string name="all_entries">ALL ENTRIES</string>
+    <string name="view_all">View All</string>
+    <string-array name="type">
+        <item>Book</item>
+        <item>Newspaper</item>
+        <item>Magazine</item>
+        <item>Poem</item>
+        <item>Comic/Graphic Novel</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="status">
+        <item>To Read</item>
+        <item>Reading</item>
+        <item>Completed</item>
+        <item>Wishlist</item>
+        <item>Favorite</item>
+    </string-array>
+</resources>

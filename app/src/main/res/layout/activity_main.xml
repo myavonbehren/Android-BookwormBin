@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mya Von Behren
+     Final Project
+     June 11, 2024
+
+     UI design including text, buttons, and chips.
+
+-->
+
+<!-- Scroll view for smaller phones or tablets. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="it372.BookwormBin.MainActivity">
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/app_name"
+            android:textColor="@color/dark_blue"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editAuthor"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="24dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/author_hint"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTitle" />
+
+        <EditText
+            android:id="@+id/editLink"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="24dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/link_hint"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/type" />
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/title_hint"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="24dp"
+            android:entries="@array/type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editAuthor"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editNotes"
+            android:layout_width="0dp"
+            android:layout_height="111dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/notes"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLink" />
+
+        <!-- Rating bar allows readers to rate a book from 0-5 by pressing on the stars
+             Stars will change to pink when clicked. -->
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:progressTint="@color/pink"
+            android:theme="@style/Widget.AppCompat.RatingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editNotes" />
+
+        <!-- ChipGroup allows user to enter multiple genres. Each chip will change to pink
+             when clicked. -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:singleSelection="false"
+            app:layout_constraintBottom_toTopOf="@+id/date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rating"
+            app:layout_constraintVertical_bias="1.0">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Fiction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fiction"
+                android:textColor="@color/light_white"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/chip_background"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/NonFiction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_fiction"
+                android:textColor="@color/light_white"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/chip_background"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Mystery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mystery"
+                android:textColor="@color/light_white"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/chip_background"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"  />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Romance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/romance"
+                android:textColor="@color/light_white"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/chip_background"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"  />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/SciFi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sci_fi"
+                android:textColor="@color/light_white"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/chip_background"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Comedy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comedy"
+                android:textColor="@color/light_white"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/chip_background"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Horror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horror"
+                android:textColor="@color/light_white"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/chip_background"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:hint="@string/date_hint"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+        <Spinner
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/status"
+            app:layout_constraintBottom_toTopOf="@+id/Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date"
+            app:layout_constraintVertical_bias="0.165" />
+
+        <!-- Submit button takes the user to the ConfirmationActivity and stores all the data
+             in the database.-->
+        <Button
+            android:id="@+id/Submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="@string/submit"
+            android:onClick="onClickEnterData"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/title"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/authorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:text="@string/author"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/editAuthor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTitle"
+            app:layout_constraintVertical_bias="0.611" />
+
+        <TextView
+            android:id="@+id/typeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/type"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editAuthor" />
+
+        <TextView
+            android:id="@+id/linkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/link"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editLink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/type" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:text="@string/date"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/dark_blue"
+            android:layout_marginBottom="8dp"
+            android:text="@string/status"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintBottom_toTopOf="@+id/status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mya Von Behren
+     Final Project
+     June 11, 2024
+
+     UI design including text and buttons.
+
+     -->
+
+<!-- Scroll view for smaller phones or tablets. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_blue"
+        android:orientation="vertical"
+        tools:context="it372.BookwormBin.ConfirmationActivity">
+
+        <TextView
+            android:id="@+id/app_name_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="sans-serif-black"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/dark_blue"
+            android:textSize="40sp" />
+
+        <!-- Each data entry has a title and text view to display the user's most recent entry. -->
+        <TextView
+            android:id="@+id/title_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/title"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/textview"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/author_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/author"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/author_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/textview" />
+
+        <TextView
+            android:id="@+id/link_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/link"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/link_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/textview" />
+
+        <TextView
+            android:id="@+id/notes_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/notes_title"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notes_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/textview" />
+
+        <TextView
+            android:id="@+id/rating_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/rating"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rating_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/textview" />
+
+        <TextView
+            android:id="@+id/genre_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/genre_title"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/genre_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/textview" />
+
+        <TextView
+            android:id="@+id/date_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/date"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/textview" />
+
+        <TextView
+            android:id="@+id/status_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/status"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="25sp"
+            android:text="@string/textview" />
+
+        <!-- Button to go back to MainActivity -->
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="@string/back"
+            android:onClick="back"/>
+
+        <!-- Button to clear text views and database entries -->
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="@string/clear"
+            android:onClick="clear"/>
+
+        <!-- Button to view all previous readings -->
+        <Button
+            android:id="@+id/view_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="@string/view_all"
+            android:onClick="viewAll"/>
+
+        <TextView
+            android:id="@+id/past_entries_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/all_entries"
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Allows users to see their current entry and their previous entries.-->
+        <TextView
+            android:id="@+id/all_entries_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
+            android:text=""
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>
